@@ -1,0 +1,257 @@
+/* Master List Styles */
+.master-list-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.master-list-header {
+  margin-bottom: 2rem;
+}
+
+.master-list-header h1 {
+  font-size: 2.5rem;
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+.search-container {
+  margin-bottom: 1.5rem;
+}
+
+.search-input {
+  width: 100%;
+  max-width: 500px;
+  padding: 0.75rem 1rem;
+  font-size: 1rem;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  transition: border-color 0.3s;
+}
+
+.search-input:focus {
+  outline: none;
+  border-color: #4a90e2;
+}
+
+.collections-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.collections-table thead {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+}
+
+.collections-table th {
+  padding: 1rem;
+  text-align: left;
+  font-weight: 600;
+  cursor: pointer;
+  user-select: none;
+  position: relative;
+}
+
+.collections-table th:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.collections-table th.sortable::after {
+  content: ' ↕';
+  opacity: 0.5;
+  font-size: 0.8em;
+}
+
+.collections-table th.sort-asc::after {
+  content: ' ↑';
+  opacity: 1;
+}
+
+.collections-table th.sort-desc::after {
+  content: ' ↓';
+  opacity: 1;
+}
+
+.collections-table tbody tr {
+  border-bottom: 1px solid #eee;
+  transition: background-color 0.2s;
+}
+
+.collections-table tbody tr:hover {
+  background-color: #f8f9fa;
+  cursor: pointer;
+}
+
+.collections-table tbody tr:last-child {
+  border-bottom: none;
+}
+
+.collections-table td {
+  padding: 1rem;
+  color: #333;
+}
+
+/* Detail Page Styles */
+.detail-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.detail-header {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 2rem;
+  border-radius: 12px;
+  margin-bottom: 2rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.detail-header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.detail-header h2 {
+  font-size: 1.5rem;
+  opacity: 0.9;
+  font-weight: 400;
+}
+
+.back-button {
+  display: inline-block;
+  margin-bottom: 1.5rem;
+  padding: 0.5rem 1rem;
+  background: #667eea;
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+  transition: background-color 0.3s;
+  font-size: 0.9rem;
+}
+
+.back-button:hover {
+  background: #5568d3;
+}
+
+.color-selector-container {
+  margin-bottom: 2rem;
+  background: white;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.color-selector-container label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  color: #333;
+  font-size: 1.1rem;
+}
+
+.color-dropdown {
+  width: 100%;
+  max-width: 400px;
+  padding: 0.75rem 1rem;
+  font-size: 1rem;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  background: white;
+  cursor: pointer;
+  transition: border-color 0.3s;
+}
+
+.color-dropdown:focus {
+  outline: none;
+  border-color: #4a90e2;
+}
+
+.detail-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.detail-table thead {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+}
+
+.detail-table th {
+  padding: 1rem;
+  text-align: left;
+  font-weight: 600;
+}
+
+.detail-table tbody tr {
+  border-bottom: 1px solid #eee;
+}
+
+.detail-table tbody tr:hover {
+  background-color: #f8f9fa;
+}
+
+.detail-table tbody tr:last-child {
+  border-bottom: none;
+}
+
+.detail-table td {
+  padding: 1rem;
+  color: #333;
+}
+
+.loading {
+  text-align: center;
+  padding: 3rem;
+  font-size: 1.2rem;
+  color: #666;
+}
+
+.error {
+  text-align: center;
+  padding: 3rem;
+  color: #d32f2f;
+  font-size: 1.1rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .master-list-container,
+  .detail-container {
+    padding: 1rem;
+  }
+
+  .master-list-header h1 {
+    font-size: 2rem;
+  }
+
+  .detail-header h1 {
+    font-size: 2rem;
+  }
+
+  .detail-header h2 {
+    font-size: 1.2rem;
+  }
+
+  .collections-table,
+  .detail-table {
+    font-size: 0.9rem;
+  }
+
+  .collections-table th,
+  .collections-table td,
+  .detail-table th,
+  .detail-table td {
+    padding: 0.75rem 0.5rem;
+  }
+}
+
